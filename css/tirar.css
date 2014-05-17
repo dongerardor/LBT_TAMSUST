@@ -1,0 +1,165 @@
+
+
+img#A319.animated {
+	-webkit-animation-name: Animacao_A319;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: Animacao_A319;
+	animation-duration: .5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes Animacao_A319 {
+	0% { opacity: 0; top: 0px; left: 160px; }
+	100% { opacity: 1; top: 80px; left: 260px; }
+}
+
+@keyframes Animacao_A319 {
+   	0% { opacity: 0; top: 0px; left: 160px; }
+ 	100% { opacity: 1; top: 80px; left: 260px; }
+}
+
+
+
+img#A320.animated {
+	-webkit-animation-name: Animacao_A320;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 1.25s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: Animacao_A320;
+	animation-duration: .5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-delay: 1.25s;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes Animacao_A320 {
+	0% { opacity: 0; top: 0px; left: 390px; }
+	100% { opacity: 1; top: 80px; left: 490px; }
+}
+
+@keyframes Animacao_A320 {
+   	0% { opacity: 0; top: 0px; left: 390px; }
+	100% { opacity: 1; top: 80px; left: 490px; }
+}
+
+img#A321.animated {
+	-webkit-animation-name: Animacao_A321;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 1.5s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: Animacao_A321;
+	animation-duration: .5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes Animacao_A321 {
+	0% { opacity: 0; top: 0; left: 597px; }
+	100% { opacity: 1; top: 80px; left: 697px; }
+}
+
+@keyframes Animacao_A321 {
+   	0% { opacity: 0; top: 0; left: 597px; }
+	100% { opacity: 1; top: 80px; left: 697px; }
+}
+
+img#A330.animated {
+	-webkit-animation-name: Animacao_A330;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 1.75s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: Animacao_A330;
+	animation-duration: .5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-delay: 1.75s;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes Animacao_A330 {
+	0% { opacity: 0; top: 180px; left: 100px; }
+	100% { opacity: 1; top: 280px; left: 200px; }
+}
+
+@keyframes Animacao_A330 {
+   	0% { opacity: 0; top: 180px; left: 100px; }
+	100% { opacity: 1; top: 280px; left: 200px; }
+}
+
+img#B767.animated {
+	-webkit-animation-name: Animacao_B767;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 2s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: Animacao_B767;
+	animation-duration: .5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes Animacao_B767 {
+	0% { opacity: 0; top: 190px; left: 361px; }
+	100% { opacity: 1; top: 290px; left: 461px; }
+}
+
+@keyframes Animacao_B767 {
+   	0% { opacity: 0; top: 190px; left: 361px; }
+	100% { opacity: 1; top: 290px; left: 461px; }
+}
+
+img#B777.animated {
+	-webkit-animation-name: Animacao_B777;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 2.25s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: Animacao_B777;
+	animation-duration: .5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-delay: 2.25s;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes Animacao_B777 {
+	0% { opacity: 0; top: 180px; left: 550px; }
+	100% { opacity: 1; top: 280px; left: 650px; }
+}
+
+@keyframes Animacao_B777 {
+   	0% { opacity: 0; top: 180px; left: 550px; }
+	100% { opacity: 1; top: 280px; left: 650px; }
+}
