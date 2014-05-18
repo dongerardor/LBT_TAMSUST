@@ -19,16 +19,15 @@
 
 		<div style="position:relative;">
 			<div id="main">
+				<img id="aviao" src="images/aviao.png">
 				<div class="titulos" id="titulo">
 					<h1>Iniciativa Inovadora</h1>
 					<h4>São 100 mil toneladas de gases de efeito estufa, que correspondem a mais de 4,5 mil voos domésticos nos dias de jogos. Os créditos de carbono premium vêm de 6 projetos, que utilizam biomassa renovável no lugar de combustível não renovável e ainda incentivam o futebol por meio de ações sociais</h4>
-					<img id="verMais" src="images/verMais.gif" alt="ver mais">
 				</div>
 
 				<div id="txtPasso1">
-					<img id="aviao" src="images/aviao.png">
 					<h4 id="txtPasso1">Mais de <span>4.500 voos</span> vão gerar <span>100.000 toneladas</span> de gases de efeito estufa...</h4>
-					<img class="linhaDivisoria" id="linhaTxt1" src="images/linhaDivisoriaTxt1.png">
+					<img class="linhaDivisoria" id="linhaTxt1" src="images/linhaDivisoriaInferior.png">
 				</div>
 
 				<div id="secao1">
@@ -80,8 +79,9 @@
 						<p class="nomeCidade" id="cidade_cuiaba">Cuiabá</p>
 					</div>
 					
-					<h5 class="legendasGrafico" id="legendaGraficoEmissoes">Emissões <br>em tCO2e</h5>
-
+					<h5 class="legendasGrafico" id="legendaGraficoEmissoes">Emissões<br>em tCO2e</h5>
+					
+					<img src="images/secao1_ON.png" alt="" id="secao1_ON">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="960px" height="230px" viewBox="0 0 960 230" enable-background="new 0 0 960 230" xml:space="preserve">
 						
 						<g id="grafico1">
@@ -189,19 +189,25 @@
 					<img src="images/linhaDivisoriaSuperior.png" class="linhaDivisoria" id="linhaDivisoriaSuperior">
 					<img src="images/linhaDivisoriaInferior.png" class="linhaDivisoria" id="linhaDivisoriaInferior">
 				
-					<h4>...que serão compensados com a aquisição de créditos de carbono premium de <span>6 projetos</span> brasileiros de biomassa renovável</h4>
+					<h4>...que serão compensados com a aquisição de créditos de carbono<br>premium de <span>6 projetos</span> brasileiros de biomassa renovável</h4>
 				</div>
 
 
 				<div id="secao2">
 					
-					<h5 class="legendasGrafico" id="legendaGraficoPlantas">Volume <br>total por <br>projeto</h5>
+					<h5 class="legendasGrafico" id="legendaGraficoPlantas">Volume total<br>por projeto</h5>
 					<img id="plantas" src="images/secao2_OFF.png" alt="Créditos em carbono">
+					
 				</div><!-- fim seção 2 -->
 
 			</div>
-
-			<img id="switch" src="images/btn_switch_OFF.png" alt="botão alternar">
+			<div id="switchWrapper">
+				<img id="switch" src="images/btn_switch_OFF.png" alt="botão alternar">
+				<div>
+					<p>Voos</p>
+					<p>Projetos</p>
+				</div>
+			</div>
 
 			
 		</div>
@@ -227,16 +233,13 @@ Essa redução gera crédito de carbono que pode ser comercializado para outras 
 				<p class="txt_rodape">Os projetos desenvolvidos pelas 6 empresas geradoras de créditos
 de carbono premium incentivam o futebol por meio de ações como apoio às competições, construção de quadras esportivas e aquisição de novos equipamentos, além de outros projetos sociais relacionados</p>
 			</div>
-			<div class="painel_rodape" id="info">
-				<h3>&nbsp;</h3>
-				<p class="txt_rodape">Emissões em toneladas: valores estimados a partir dos dados do inventário de gases de efeito estufa 2013. Quando da tt dos vôos, os cálculos serão exatos, bem como a aquisição de novos créditos, se necessário. Material produzido em maio/2014</p>
-			</div>
 
 			<div id="nav_rodape">
 				<img class="icones" id="planta" src="./images/icone_planta_rodape_pq.png">
 				<img class="icones" id="bola" src="./images/icone_bola_rodape_pq.png">
-				<img class="icones" id="info" src="./images/icone_info_rodape_pq.png">
 			</div>
+			<hr id="peSecao2">
+			<p class="txt_rodape">Emissões em toneladas: valores estimados a partir dos dados do inventário de gases de efeito estufa 2013. Quando da tt dos vôos, <br>os cálculos serão exatos, bem como a aquisição de novos créditos, se necessário. Material produzido em maio/2014</p>
 		</div>
 	</div>
 

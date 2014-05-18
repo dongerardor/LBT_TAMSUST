@@ -23,7 +23,7 @@ window.onload=function(){
 
 
 function init(){
-	$("#legendaGraficoPlantas").hide();
+	//$("#legendaGraficoPlantas").hide();
 }
 
 function initPainelRodape(){
@@ -66,16 +66,17 @@ function switchStatus(){
 
 	if (status==1){
 		$("img#plantas").attr("src", "images/secao2_ON.png");
-		$("#grafico1").attr("transform", "scale(1, .4)");
-		$("#legendaGraficoEmissoes").css("top", 102);
-		$("div#txtNomesCidadesWrapper").css("top", 75);
-		$("#legendaGraficoPlantas").show();
-		$("#txtPasso2").css("top", 270);
-		$("#txtValoresCarbonoWrapper").css("top", 145);
-		$("#titulo").css("height", 75).addClass("short");
+		$("#grafico1").attr("transform", "scale(1, .2)");
+		$("#legendaGraficoEmissoes").css("top", 66);
+		//$("div#txtNomesCidadesWrapper").css("top", 75);
+		$("#legendaGraficoPlantas").css("top", 320);
+		$("#txtPasso2").css("top", 235);
+		$("#txtValoresCarbonoWrapper").css("top", 97);
+		//$("#titulo").css("height", 75).addClass("short");
 		$("#verMais").show();
+		$(".nomeCidade").hide();
 
-		$(".nomeCidade").each(function(i){
+		/*$(".nomeCidade").each(function(i){
 			var objCidade;
 			for (i=0; i<=CIDADES.length; i++){
 				if (CIDADES[i]["id"] == $(this).attr("id")){
@@ -84,20 +85,21 @@ function switchStatus(){
 					return;
 				}
 			}
-		});
+		});*/
 
 	}else{
 		$("img#plantas").attr("src", "images/secao2_OFF.png");
 		$("#grafico1").attr("transform", "scale(1, 1)");
 		$("#legendaGraficoEmissoes").css("top", 248);
-		$("div#txtNomesCidadesWrapper").css("top", 130);
-		$("#legendaGraficoPlantas").hide();
-		$("#txtPasso2").css("top", 410);
+		//$("div#txtNomesCidadesWrapper").css("top", 150);
+		$("#legendaGraficoPlantas").css("top", 468);
+		$("#txtPasso2").css("top", 420);
 		$("#txtValoresCarbonoWrapper").css("top", 280);
-		$("#titulo").css("height", 270).removeClass("short");
+		//$("#titulo").css("height", 270).removeClass("short");
 		$("#verMais").hide();
+		$(".nomeCidade").show();
 
-		$(".nomeCidade").each(function(i){
+		/*$(".nomeCidade").each(function(i){
 			var objCidade;
 			for (i=0; i<=CIDADES.length; i++){
 				if (CIDADES[i]["id"] == $(this).attr("id")){
@@ -106,6 +108,6 @@ function switchStatus(){
 					return;
 				}
 			}
-		});
+		});*/
 	}
 }

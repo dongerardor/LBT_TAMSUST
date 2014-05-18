@@ -178,52 +178,67 @@ span{
 
 #main h1{
 	color: rgb(0, 110, 171);
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
 }
 
 #main div.titulos{
-	padding-left: 50px;
-	padding-top: 30px;
-	width: 20%;
-	height: 250px;
-	position: relative;
-	overflow: hidden;
-	-webkit-transition: height 1s; /* For Safari 3.1 to 6.0 */
-	transition: height 1s;
-}
-#main div.titulos.short{
-	border-bottom: 1px solid black;
+	width: 100%;
+	position: absolute;
+	top: 20px;
 }
 
 #main div.titulos h4{
 	font-size: 16px;
-}
-#main div.titulos img#verMais{
-	display: none;
-	position: absolute;
-	bottom: 5px;
-	left: 5px;
-	cursor: pointer;
-	z-index: 999;
+	text-align: center;
+	width: 53%;
+	margin: 0 auto;
 }
 
 
 
 
 
-
-
-img#switch{
+div#switchWrapper{
 	position: absolute;
-	top: 35px;
-	right: 50px;
-	cursor: pointer;
+	top: 47px;
+	right: 36px;
 	z-index: 1000;
 }
+div#switchWrapper img#switch{
+	float: left;
+	cursor: pointer;
+}
+div#switchWrapper div{
+	float: left;
+	margin-left: 5px;
+}
+div#switchWrapper p{
+	font-weight: bolder;
+	text-transform: uppercase;
+	font-size: 11px;
+	color: #666;
+}
+div#switchWrapper p:nth-child(1){
+	margin-top: 10px;
+}
+div#switchWrapper p:nth-child(2){
+	margin-top: 17px;
+}
+
+
 
 .floor{
 	overflow: hidden;
 }
 
+img#aviao{
+	width: 160px;
+	position: absolute;
+	left: 22px;
+	top: 42px;
+}
 
 /* linha divisoria 1 */
 
@@ -233,35 +248,30 @@ img.linhaDivisoria{
 div#txtPasso1{
 	width: 100%;
 	position: absolute;
-	top: 10px;
-}
-div#txtPasso1 img#aviao{
-	width: 160px;
-	margin-left: 40%;
+	top: 130px;
 }
 div#txtPasso1 h4#txtPasso1{
-	width: 30%;
+	font-size: .9em;
 	text-align: center;
-	margin: 0 auto;
 }
 img#linhaTxt1{
-	top: 70px;
-	left: 320px;
+	top: 8px;
+	left: 87px;
 }
 
 /* seção 1 */
 
 div#secao1{
 	width: 100%;
-	height: 100%;
 	position: absolute;
-	top: 100px;
+	top: 120px;
+
 }
 
 div#secao1 div#txtVoosWrapper {
 	position: absolute;
 	left: 310px;
-	top: 20px;
+	top: 34px;
 }
 
 .numerosGrafico { position: absolute; }
@@ -282,7 +292,7 @@ div#secao1 div#txtVoosWrapper {
 div#secao1 div#txtNomesCidadesWrapper{	
 	position: absolute;
 	left: 304px;
-	top: 130px;
+	top: 150px;
 	-webkit-transform-origin: top left;
 	-moz-transform-origin: top left;
 	-ms-transform-origin: top left;
@@ -303,7 +313,7 @@ div#secao1 div#txtNomesCidadesWrapper p.nomeCidade{
 div#secao1 div#bolinhasWrapper{
 	position: relative;
 	margin-left: 3px;
-	top: 40px;
+	top: 56px;
 }
 
 .bolinhas{
@@ -328,12 +338,12 @@ h5.legendasGrafico{
 	position: absolute;
 }
 h5.legendasGrafico#legendaGraficoVoos{
-	top: 27px;
-	left: 270px;
+	top: 31px;
+	left: 50px;
 }
 
 div#secao1 h5#legendaGraficoEmissoes{
-	top: 240px;
+	top: 248px;
 	left: 10px;
 	width: 70px;
 	text-align: right;
@@ -370,13 +380,14 @@ div#secao1 div#txtValoresCarbonoWrapper p{
 
 
 div#txtPasso2{
-	position: absolute;
-	top: 410px;
+	position: relative;
+	top: 420px;
 	left: 90px;
 	width: 780px;
 }
 
 div#txtPasso2 h4{
+	font-size: .9em;
 	width: 480px;
 	text-align: center;
 	margin: 0 auto;
@@ -386,23 +397,24 @@ div#txtPasso2 h4{
 div#txtPasso2 img.linhaDivisoria#linhaDivisoriaSuperior{
 }
 div#txtPasso2 img.linhaDivisoria#linhaDivisoriaInferior{
-	top:30px;
+	top:15px;
 }
 
 
 
 
-
+div#secao2{
+	
+}
 
 div#secao2 img#plantas{
 	position: absolute;
-	bottom: 0;
+	bottom: 35px;
 	left: 80px;
 }
 div#secao2 h5#legendaGraficoPlantas{
-	top: 360px;
-	left: 10px;
-	width: 70px;
+	top: 468px;
+	left: 14px;
 	text-align: right;
 }
 
@@ -451,16 +463,19 @@ div#rodape div#nav_rodape{
 	right: 0;
 	bottom: -11px;
 	width: 70px;
-	height: 170px;
+	height: 100px;
 }
 div#rodape div#nav_rodape{
 	background-image:url('../images/painel_rodape.png');
 }
 div#rodape img.icones{
 	margin-left: 28px;
-	margin-top: 12px;
+	margin-top: 10px;
 	opacity: .8;
 	cursor: pointer;
+}
+div#rodape img.icones#bola{
+	margin-top: 4px;
 }
 div#rodape img.icones:hover{
 	opacity: 1;
@@ -485,6 +500,19 @@ div#rodape div.painel_rodape{
 	border-top-left-radius: 20px;
 	display: none;
 }
+
+p.txt_rodape{
+	margin-top: -12px;
+	color: #999;
+	font-size: 11px;
+	line-height: 13px;
+}
+ hr#peSecao2{
+ 	position: absolute;
+	top: -14px;
+	width: 670px;
+	left: 140px;
+ }
 
 /* clearfix */
 .cf:before, .cf:after { content: ""; display: table; }
