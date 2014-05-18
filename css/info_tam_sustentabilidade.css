@@ -270,23 +270,28 @@ div#secao1{
 
 div#secao1 div#txtVoosWrapper {
 	position: absolute;
-	left: 310px;
 	top: 34px;
 }
 
-.numerosGrafico { position: absolute; }
-#txtVoos_saopaulo 		{ left: 3px; }
-#txtVoos_brasilia 		{ left: 38px; }
-#txtVoos_riodejaneiro 	{ left: 67px; }
-#txtVoos_fortaleza 		{ left: 95px; }
-#txtVoos_belohorizonte 	{ left: 123px; }
-#txtVoos_salvador 		{ left: 150px; }
-#txtVoos_recife 		{ left: 175px; }
-#txtVoos_portoalegre 	{ left: 201px; }
-#txtVoos_curitiba  		{ left: 225px; }
-#txtVoos_manaus 		{ left: 256px; }
-#txtVoos_natal 			{ left: 281px; }
-#txtVoos_cuiaba 		{ left: 307px; }
+.numerosGrafico { 
+	position: absolute;
+}
+div#txtVoosWrapper p.numerosGrafico{
+	width: 40px;
+	text-align: center;
+}
+#txtVoos_saopaulo 		{ left: 302px; }
+#txtVoos_brasilia 		{ left: 335px; }
+#txtVoos_riodejaneiro 	{ left: 365px; }
+#txtVoos_fortaleza 		{ left: 393px; }
+#txtVoos_belohorizonte 	{ left: 420px; }
+#txtVoos_salvador 		{ left: 446px; }
+#txtVoos_recife 		{ left: 471px; }
+#txtVoos_portoalegre 	{ left: 498px; }
+#txtVoos_curitiba  		{ left: 523px; }
+#txtVoos_manaus 		{ left: 551px; }
+#txtVoos_natal 			{ left: 576px; }
+#txtVoos_cuiaba 		{ left: 602px; }
 
 
 div#secao1 div#txtNomesCidadesWrapper{	
@@ -307,8 +312,20 @@ div#secao1 div#txtNomesCidadesWrapper{
 }
 div#secao1 div#txtNomesCidadesWrapper p.nomeCidade{
 	text-align: right;
-	line-height: 28px;
+	position: relative;
 }
+div#secao1 div#txtNomesCidadesWrapper p#cidade_saopaulo 		{top: 7px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_brasilia 		{top: 24px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_riodejaneiro 	{top: 37px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_fortaleza 		{top: 51px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_belohorizonte 	{top: 60px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_salvador 		{top: 71px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_recife 			{top: 80px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_portoalegre 		{top: 88px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_curitiba 		{top: 99px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_manaus 			{top: 108px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_natal 			{top: 117px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_cuiaba 			{top: 124px;}
 
 div#secao1 div#bolinhasWrapper{
 	position: relative;
@@ -349,8 +366,14 @@ div#secao1 h5#legendaGraficoEmissoes{
 	text-align: right;
 }
 
-div#secao1 svg{
-	margin-top: 51px;
+div#secao1 img#secao1_ON{
+	margin-top: 56px;
+	margin-left: 88px;
+}
+div#secao1 img#secao1_OFF{
+	position: absolute;
+	left: 88px;
+	top: 275px;
 }
 
 div#secao1 div#txtValoresCarbonoWrapper{
@@ -364,18 +387,18 @@ div#secao1 div#txtValoresCarbonoWrapper p{
 	position: absolute;
 }
 
-#txtEmissoes_saopaulo { left: 29px; }
-#txtEmissoes_brasilia { left: 188px; }
-#txtEmissoes_riodejaneiro { left: 319px; }
-#txtEmissoes_fortaleza { left: 410px; }
-#txtEmissoes_belohorizonte { left: 458px; }
-#txtEmissoes_salvador { left: 501px; }
-#txtEmissoes_recife { left: 552px; }
-#txtEmissoes_portoalegre { left: 597px; }
-#txtEmissoes_curitiba { left: 629px; }
-#txtEmissoes_manaus { left: 664px; }
-#txtEmissoes_natal { left: 702px; }
-#txtEmissoes_cuiaba { left: 731px; }
+#txtEmissoes_saopaulo 		{ left:  29px; }
+#txtEmissoes_brasilia 		{ left: 188px; }
+#txtEmissoes_riodejaneiro 	{ left: 319px; }
+#txtEmissoes_fortaleza 		{ left: 410px; }
+#txtEmissoes_belohorizonte 	{ left: 458px; }
+#txtEmissoes_salvador 		{ left: 501px; }
+#txtEmissoes_recife 		{ left: 552px; }
+#txtEmissoes_portoalegre 	{ left: 597px; }
+#txtEmissoes_curitiba 		{ left: 629px; }
+#txtEmissoes_manaus 		{ left: 664px; }
+#txtEmissoes_natal 			{ left: 702px; }
+#txtEmissoes_cuiaba 		{ left: 731px; }
 
 
 
