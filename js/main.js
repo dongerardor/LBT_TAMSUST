@@ -1,5 +1,4 @@
 var status = 0;
-var transition = false;
 
 var CIDADES = [
 {"nome": "São Paulo", 		"prefix": "saopaulo", 		"abbr": "SP",	"bolaON": 320,	"bolaOFF": 159, "numVoosON": 302, "numVoosOFF": 141},
@@ -19,6 +18,7 @@ window.onload=function(){
 	init();
 	initPainelRodape();
 	initSwitch();
+	initTooltips();
 
 }; //fim onload
 
@@ -30,7 +30,6 @@ function init(){
 function initPainelRodape(){
 
 	$(".icones").click(function(evt){
-		
 		if ($(this).hasClass("selected")){
 			$(".icones").removeClass("selected");
 			$(".painel_rodape").css("display", "none");
@@ -40,7 +39,6 @@ function initPainelRodape(){
 			$(".painel_rodape").css("display", "none");
 			$(".painel_rodape#" +  $(this).attr("id")).fadeIn();
 		}
-		
 	});
 
 	$(".painel_rodape").click(function(evt){
@@ -51,24 +49,27 @@ function initPainelRodape(){
 
 function initSwitch(){
 
-	$("img#verMais").click(function (evt) {
+	$("#switch, #plantas").click(function(evt){
 		status = status == 0?1:0;
 		switchStatus();
-	});
-	$("#switch").click(function(evt){
-		if (!transition){
-			status = status == 0?1:0;
-			switchStatus();
-		}
 	})
 }
 
 function switchStatus(){
-	transition = true;
 	var imgsSwitch = ["images/btn_switch_OFF.png", "images/btn_switch_ON.png"];
 	$("#switch").attr("src", imgsSwitch[status]);
 
 	if (status==1){
+
+		$("#legendaGraficoPlantas").stop();
+		$("img#plantas").stop();
+		$("#txtPasso2").stop();
+		$("#secao1_OFF").stop();
+		$("#secao1_ON").stop();
+		$("#legendaGraficoEmissoes").stop();
+		$("#bolinhasWrapper img").stop();
+		$("#txtVoosWrapper p").stop();
+
 
 		$( "#secao1_OFF" ).css("opacity", 0).css("display", "block").animate({
 		    opacity: 1
@@ -103,6 +104,16 @@ function switchStatus(){
 
 	}else{
 
+		$("#legendaGraficoPlantas").stop();
+		$("img#plantas").stop();
+		$("#txtPasso2").stop();
+		$("#secao1_OFF").stop();
+		$("#secao1_ON").stop();
+		$("#legendaGraficoEmissoes").stop();
+		$("#bolinhasWrapper img").stop();
+		$("#txtVoosWrapper p").stop();
+
+
 		$("#legendaGraficoPlantas").animate		({ top:     468 
 		}, 500, function(){
 			$("img#plantas").css("opacity", 0)
@@ -113,7 +124,7 @@ function switchStatus(){
 			$("#txtPasso2").animate								({ top: 420 }, 500, function(){
 				$("#txtValoresCarbonoWrapper").animate			({ top: 280 });
 				$( "#secao1_OFF" ).animate						({ top: 275 });
-				$( "#secao1_OFF" ).delay(500).animate			({ opacity: 0 }, function(){ transition = false; });
+				$( "#secao1_OFF" ).delay(500).animate			({ opacity: 0 });
 				$("#secao1_ON").animate							({ opacity: 1 });
 				$(".nomeCidade").animate						({ opacity: 1 });
 				$("#legendaGraficoEmissoes").animate			({ top: 248 })
@@ -147,4 +158,19 @@ function moveNumerosVoos(idNumero){
 			return status == 1?CIDADES[i].numVoosOFF:CIDADES[i].numVoosON;
 		}
 	}
+}
+
+function initTooltips(){
+	$(".bolinhas").mouseover(function(evt){	
+		if (status==1){	
+			var cidadePrefix = $(this).attr("id").split("_")[1];
+			var tooltipLeft = $(this).css("left").split("px")[0] - 70;
+			$("#tooltip_" +  cidadePrefix).css({
+				left: tooltipLeft,
+				display: "block"
+			});
+		}
+	}).mouseout(function(evt){
+		$(".tooltip").css("display", "none");
+	});
 }
