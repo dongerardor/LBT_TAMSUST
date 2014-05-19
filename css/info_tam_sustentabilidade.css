@@ -138,7 +138,7 @@ span{
 .numerosGrafico{
 	font-weight: bold;
 	font-size: 12px;
-	color: darkgrey;
+	color: #555;
 	float: left;
 	margin-left: 10px;
 
@@ -454,7 +454,7 @@ div#rodape{
 	height: 10px;
 }
 div#rodape p#txtRodape{
-	color: #999;
+	color: #555;
 	float: left;
 	font-size: 11px;
 }
@@ -474,7 +474,7 @@ div#rodape p#menuLinguasRodape b{
 }
 div#rodape p#menuLinguasRodape a{
 	text-decoration: none;
-	color: #999;
+	color: #555;
 }
 
 div#rodape p#menuLinguasRodape a:hover{
@@ -511,7 +511,7 @@ div#rodape img.icones.selected{
 
 div#rodape div.painel_rodape{
 	position: absolute;
-	width: 700px;
+	width: 735px;
 	height: 80px;
 	bottom: -10px;
 	right: 0;
@@ -527,7 +527,7 @@ div#rodape div.painel_rodape{
 
 p.txt_rodape{
 	margin-top: -12px;
-	color: #999;
+	color: #555;
 	font-size: 11px;
 	line-height: 13px;
 }

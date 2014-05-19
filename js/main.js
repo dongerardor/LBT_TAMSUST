@@ -112,19 +112,19 @@ function switchStatus(){
 				//passo 2
 			$("#txtPasso2").animate								({ top: 420 }, 500, function(){
 				$("#txtValoresCarbonoWrapper").animate			({ top: 280 });
-				$( "#secao1_OFF" ).animate						({ top: 275, opacity: 0 });
+				$( "#secao1_OFF" ).animate						({ top: 275 });
+				$( "#secao1_OFF" ).delay(500).animate			({ opacity: 0 }, function(){ transition = false; });
 				$("#secao1_ON").animate							({ opacity: 1 });
 				$(".nomeCidade").animate						({ opacity: 1 });
-				$("#legendaGraficoEmissoes").animate		({ top: 248 })
+				$("#legendaGraficoEmissoes").animate			({ top: 248 })
 				$("#bolinhasWrapper img").each(function(i, bola){
 					$(bola).animate								({ left: moveBolinhas($(bola).attr("id")) })
 				});
 				$("#txtVoosWrapper p").each(function(i, numero){
-					$(numero).animate							({ left: moveNumerosVoos($(numero).attr("id")) }, 500, function(){
-						transition = false;
-					})
+					$(numero).animate							({ left: moveNumerosVoos($(numero).attr("id")) })
 				});
-
+				
+				
 			});
 		});
 	}
