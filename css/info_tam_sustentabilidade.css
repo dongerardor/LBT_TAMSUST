@@ -374,6 +374,7 @@ div#secao1 img#secao1_OFF{
 	position: absolute;
 	left: 88px;
 	top: 275px;
+	display: none;
 }
 
 div#secao1 div#txtValoresCarbonoWrapper{
