@@ -1,4 +1,5 @@
 var status = 0;
+var transition = false;
 
 var CIDADES = [
 {"nome": "São Paulo", 		"prefix": "saopaulo", 		"abbr": "SP",	"bolaON": 320,	"bolaOFF": 159, "numVoosON": 302, "numVoosOFF": 141},
@@ -55,12 +56,15 @@ function initSwitch(){
 		switchStatus();
 	});
 	$("#switch").click(function(evt){
-		status = status == 0?1:0;
-		switchStatus();
+		if (!transition){
+			status = status == 0?1:0;
+			switchStatus();
+		}
 	})
 }
 
 function switchStatus(){
+	transition = true;
 	var imgsSwitch = ["images/btn_switch_OFF.png", "images/btn_switch_ON.png"];
 	$("#switch").attr("src", imgsSwitch[status]);
 
@@ -91,7 +95,9 @@ function switchStatus(){
 				.animate								({ opacity: 1 });
 
 				$("#legendaGraficoPlantas").animate		({ top: 320 });
-				$("#txtValoresCarbonoWrapper").animate	({ top: 87 });
+				$("#txtValoresCarbonoWrapper").animate	({ top: 87 }, 500, function(){
+					transition = false;
+				});
 			});
 		});
 
@@ -114,7 +120,9 @@ function switchStatus(){
 					$(bola).animate								({ left: moveBolinhas($(bola).attr("id")) })
 				});
 				$("#txtVoosWrapper p").each(function(i, numero){
-					$(numero).animate							({ left: moveNumerosVoos($(numero).attr("id")) })
+					$(numero).animate							({ left: moveNumerosVoos($(numero).attr("id")) }, 500, function(){
+						transition = false;
+					})
 				});
 
 			});
