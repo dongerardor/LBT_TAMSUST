@@ -1,3 +1,12 @@
+tooltips
+
+activación en la imagen del pie
+
+animación inicial
+
+
+
+
 function switchStatus(){
 	transition = true;
 	var imgsSwitch = ["images/btn_switch_OFF.png", "images/btn_switch_ON.png"];

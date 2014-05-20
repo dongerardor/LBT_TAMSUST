@@ -92,7 +92,7 @@ function switchStatus(){
 				//SEÇÃO 2
 				//$("img#plantas").attr("src", "images/secao2_ON.png");
 				$("img#plantas").css("opacity", 0)
-				.attr("src", "images/secao2_ON.png")
+				.attr("src", "images/secao2_ON_" + lang + ".png")
 				.animate								({ opacity: 1 });
 
 				$("#legendaGraficoPlantas").animate		({ top: 320 });
@@ -114,11 +114,11 @@ function switchStatus(){
 		$("#txtVoosWrapper p").stop();
 
 
-		$("#legendaGraficoPlantas").animate		({ top:     468 
-		}, 500, function(){
+		$("#legendaGraficoPlantas").animate						({ top: 468 
+		}, 100, function(){
 			$("img#plantas").css("opacity", 0)
 				.attr("src", "images/secao2_OFF.png")
-				.animate								({ opacity: 1 })
+				.animate										({ opacity: 1 })
 
 				//passo 2
 			$("#txtPasso2").animate								({ top: 420 }, 500, function(){
