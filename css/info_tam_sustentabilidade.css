@@ -187,6 +187,7 @@ span{
 	width: 100%;
 	position: absolute;
 	top: 20px;
+	opacity: 0;
 }
 
 #main div.titulos h4{
@@ -205,6 +206,7 @@ div#switchWrapper{
 	top: 47px;
 	right: 36px;
 	z-index: 1000;
+	display: none;
 }
 div#switchWrapper img#switch{
 	float: left;
@@ -236,8 +238,9 @@ div#switchWrapper p:nth-child(2){
 img#aviao{
 	width: 160px;
 	position: absolute;
-	left: 22px;
+	left: -100px;
 	top: 42px;
+	opacity: 0;
 }
 
 /* linha divisoria 1 */
@@ -249,6 +252,7 @@ div#txtPasso1{
 	width: 100%;
 	position: absolute;
 	top: 130px;
+	display: none;
 }
 div#txtPasso1 h4#txtPasso1{
 	font-size: .9em;
@@ -271,6 +275,7 @@ div#secao1{
 div#secao1 div#txtVoosWrapper {
 	position: absolute;
 	top: 34px;
+	display: none;
 }
 
 .numerosGrafico { 
@@ -296,6 +301,7 @@ div#txtVoosWrapper p.numerosGrafico{
 
 div#secao1 div#txtNomesCidadesWrapper{	
 	position: absolute;
+	display: none;
 	left: 304px;
 	top: 150px;
 	-webkit-transform-origin: top left;
@@ -338,21 +344,22 @@ div#secao1 div#bolinhasWrapper{
 	width: 17px;
 }
 
-.bolinhas#bolinha_saopaulo 		{left: 320px}
-.bolinhas#bolinha_brasilia 		{left: 353px}
-.bolinhas#bolinha_riodejaneiro 	{left: 384px}
-.bolinhas#bolinha_fortaleza 	{left: 411px}
-.bolinhas#bolinha_belohorizonte {left: 438px}
-.bolinhas#bolinha_salvador 		{left: 465px}
-.bolinhas#bolinha_recife 		{left: 491px}
-.bolinhas#bolinha_portoalegre 	{left: 517px}
-.bolinhas#bolinha_curitiba 		{left: 543px}
-.bolinhas#bolinha_manaus 		{left: 569px}
-.bolinhas#bolinha_natal 		{left: 595px}
-.bolinhas#bolinha_cuiaba 		{left: 621px}
+.bolinhas#bolinha_saopaulo 		{ left: 320px; opacity: 0; }
+.bolinhas#bolinha_brasilia 		{ left: 353px; opacity: 0; }
+.bolinhas#bolinha_riodejaneiro 	{ left: 384px; opacity: 0; }
+.bolinhas#bolinha_fortaleza 	{ left: 411px; opacity: 0; }
+.bolinhas#bolinha_belohorizonte { left: 438px; opacity: 0; }
+.bolinhas#bolinha_salvador 		{ left: 465px; opacity: 0; }
+.bolinhas#bolinha_recife 		{ left: 491px; opacity: 0; }
+.bolinhas#bolinha_portoalegre 	{ left: 517px; opacity: 0; }
+.bolinhas#bolinha_curitiba 		{ left: 543px; opacity: 0; }
+.bolinhas#bolinha_manaus 		{ left: 569px; opacity: 0; }
+.bolinhas#bolinha_natal 		{ left: 595px; opacity: 0; }
+.bolinhas#bolinha_cuiaba 		{ left: 621px; opacity: 0; }
 
 h5.legendasGrafico{
 	position: absolute;
+	display: none;
 }
 h5.legendasGrafico#legendaGraficoVoos{
 	top: 31px;
@@ -370,6 +377,7 @@ div#secao1 img#secao1_ON{
 	margin-top: 56px;
 	margin-left: 88px;
 	pointer-events: none;
+	display: none;
 }
 div#secao1 img#secao1_OFF{
 	position: absolute;
@@ -382,6 +390,7 @@ div#secao1 div#txtValoresCarbonoWrapper{
 	margin-left: 100px;
 	position: absolute;
 	top: 280px;
+	display: none;
 }
 div#secao1 div#txtValoresCarbonoWrapper p{
 	float: left;
@@ -409,6 +418,7 @@ div#txtPasso2{
 	top: 420px;
 	left: 90px;
 	width: 780px;
+	display: none;
 }
 
 div#txtPasso2 h4{
@@ -437,6 +447,7 @@ div#secao2 img#plantas{
 	bottom: 35px;
 	left: 80px;
 	cursor: pointer;
+	display: none;
 }
 div#secao2 h5#legendaGraficoPlantas{
 	top: 468px;
@@ -532,12 +543,14 @@ p.txt_rodape{
 	color: #555;
 	font-size: 11px;
 	line-height: 13px;
+	display: none;
 }
  hr#peSecao2{
  	position: absolute;
 	top: -14px;
 	width: 670px;
 	left: 140px;
+	display: none;
  }
 
 

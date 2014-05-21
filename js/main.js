@@ -4,7 +4,7 @@ var CIDADES = [
 {"nome": "São Paulo", 		"prefix": "saopaulo", 		"abbr": "SP",	"bolaON": 320,	"bolaOFF": 159, "numVoosON": 302, "numVoosOFF": 141},
 {"nome": "Brasília", 		"prefix": "brasilia", 		"abbr": "DF",	"bolaON": 353,	"bolaOFF": 318, "numVoosON": 335, "numVoosOFF": 300},
 {"nome": "Rio de Janeiro", 	"prefix": "riodejaneiro", 	"abbr": "RJ",	"bolaON": 384,	"bolaOFF": 447, "numVoosON": 365, "numVoosOFF": 430},
-{"nome": "Fortaleza", 		"prefix": "fortaleza", 		"abbr": "CE",	"bolaON": 411,	"bolaOFF": 536, "numVoosON": 393, "numVoosOFF": 519},
+{"nome": "Fortaleza", 		"prefix": "fortaleza", 		"abbr": "CE",	"bolaON": 411,	"bolaOFF": 530, "numVoosON": 393, "numVoosOFF": 515},
 {"nome": "Belo Horizonte", 	"prefix": "belohorizonte", 	"abbr": "MG",	"bolaON": 438,	"bolaOFF": 582, "numVoosON": 420, "numVoosOFF": 564},
 {"nome": "Salvador", 		"prefix": "salvador", 		"abbr": "BA",	"bolaON": 465,	"bolaOFF": 626, "numVoosON": 446, "numVoosOFF": 609},
 {"nome": "Recife", 			"prefix": "recife", 		"abbr": "PE",	"bolaON": 491,	"bolaOFF": 677, "numVoosON": 471, "numVoosOFF": 659},
@@ -15,16 +15,81 @@ var CIDADES = [
 {"nome": "Cuiabá", 			"prefix": "cuiaba", 		"abbr": "MT",	"bolaON": 621,	"bolaOFF": 858, "numVoosON": 602, "numVoosOFF": 839}];
 
 window.onload=function(){
-	init();
-	initPainelRodape();
-	initSwitch();
-	initTooltips();
 
+	$(".bolinhas").each(function(i, bola){
+		$(bola).css({
+	      "top"		: 300,
+	      "left"	: Math.random()*1000,
+	      "height"	: 50,
+	      "width"	: 50
+    	});
+	});
+
+	$("div.titulos").css("display", "block").animate ({ opacity: 1 }, 1000, function(){
+		var animacaoBolinhasComplete = 0;
+		$(".bolinhas").each(function(i, bola){
+			var posXbola = function(){
+				for (i in CIDADES){
+					if (CIDADES[i].prefix == bola.id.split("_")[1]){
+						return CIDADES[i].bolaON;
+					}
+				}
+			}();
+			$(bola).delay(Math.round(Math.random()*2000)).animate ({ 
+				opacity: 1,
+				top: 0,
+				left: posXbola,
+				width: 22,
+				height: 22
+			}, 500, function(){
+				animacaoBolinhasComplete++;
+				if (animacaoBolinhasComplete >= 12){
+					continueAnimation1();
+				}
+			})
+		});
+	});
+
+	function continueAnimation1(){
+		$("img#secao1_ON").fadeIn("fast", function(){
+			//$("img#secao1_ON").fadeIn();
+			$("#txtPasso1").fadeIn("fast", function(){
+				$("#txtVoosWrapper").fadeIn();
+				$("#txtNomesCidadesWrapper").fadeIn();
+				$("#legendaGraficoVoos").fadeIn();
+				$("#txtVoosWrapper").fadeIn();
+			}).delay(500, function(){
+				$("#txtValoresCarbonoWrapper").fadeIn();
+				$("#legendaGraficoEmissoes").fadeIn();
+				$("#txtValoresCarbonoWrapper").fadeIn()
+				.delay(500, function(){
+					$("#txtPasso2").fadeIn();
+					$("#peSecao2").fadeIn();
+					$("#plantas").fadeIn();
+					$("#legendaGraficoPlantas").fadeIn();
+					$(".txt_rodape").fadeIn()
+					.delay(500, function(){
+						$("#aviao").animate({ 
+							left:22,
+							opacity: 1
+						}, 500, function(){
+							$("#switchWrapper").delay(500).fadeIn("slow", function(){
+								init();
+							});
+						});
+					});
+				});
+			});
+		});
+		
+	}
 }; //fim onload
 
 
 function init(){
-	//$("#legendaGraficoPlantas").hide();
+	initPainelRodape();
+	initSwitch();
+	initTooltips();
 }
 
 function initPainelRodape(){
@@ -48,7 +113,6 @@ function initPainelRodape(){
 }
 
 function initSwitch(){
-
 	$("#switch, #plantas").click(function(evt){
 		status = status == 0?1:0;
 		switchStatus();
@@ -84,20 +148,19 @@ function switchStatus(){
 			$("#txtVoosWrapper p").each(function(i, numero){
 				$(numero).animate						({ left: moveNumerosVoos($(numero).attr("id")) })
 			});
-			$("#txtValoresCarbonoWrapper").animate		({ top: 87 });
+			///
+			$("#txtValoresCarbonoWrapper").css("top", 87);
 
 			//passo 2
 			$("#txtPasso2").delay(500).animate			({ top: 235 }, 500, function(){
 
 				//SEÇÃO 2
-				//$("img#plantas").attr("src", "images/secao2_ON.png");
+				$("img#plantas").attr("src", "images/secao2_ON.png");
+
 				$("img#plantas").css("opacity", 0)
 				.attr("src", "images/secao2_ON_" + lang + ".png")
-				.animate								({ opacity: 1 });
-
-				$("#legendaGraficoPlantas").animate		({ top: 320 });
-				$("#txtValoresCarbonoWrapper").animate	({ top: 87 }, 500, function(){
-					transition = false;
+				.animate								({ opacity: 1 }, 500, function(){
+					$("#legendaGraficoPlantas").animate	({ top: 320 });
 				});
 			});
 		});
@@ -122,7 +185,7 @@ function switchStatus(){
 
 				//passo 2
 			$("#txtPasso2").animate								({ top: 420 }, 500, function(){
-				$("#txtValoresCarbonoWrapper").animate			({ top: 280 });
+				$("#txtValoresCarbonoWrapper").css("top", 280);//			({ top: 380 });
 				$( "#secao1_OFF" ).animate						({ top: 275 });
 				$( "#secao1_OFF" ).delay(500).animate			({ opacity: 0 });
 				$("#secao1_ON").animate							({ opacity: 1 });
@@ -134,8 +197,6 @@ function switchStatus(){
 				$("#txtVoosWrapper p").each(function(i, numero){
 					$(numero).animate							({ left: moveNumerosVoos($(numero).attr("id")) })
 				});
-				
-				
 			});
 		});
 	}
