@@ -17,15 +17,24 @@ var CIDADES = [
 window.onload=function(){
 
 	$(".bolinhas").each(function(i, bola){
+		var posXbolaInit = function(){
+			for (var i in CIDADES){
+				if (CIDADES[i].prefix == bola.id.split("_")[1]){
+					console.log(CIDADES[i].bolaOFF);
+					return CIDADES[i].bolaOFF;
+				}
+			}
+		}();
+
 		$(bola).css({
-	      "top"		: 300,
-	      "left"	: Math.random()*1000,
-	      "height"	: 50,
-	      "width"	: 50
+	      "top"		: -500,
+	      "left"	: posXbolaInit,
+	      "height"	: 100,
+	      "width"	: 100
     	});
 	});
 
-	$("div.titulos").css("display", "block").animate ({ opacity: 1 }, 1000, function(){
+	$("div.titulos").css("display", "block").animate ({ opacity: 1 }, 2000, function(){
 		var animacaoBolinhasComplete = 0;
 		$(".bolinhas").each(function(i, bola){
 			var posXbola = function(){
@@ -41,7 +50,7 @@ window.onload=function(){
 				left: posXbola,
 				width: 22,
 				height: 22
-			}, 500, function(){
+			}, 1000, 'easeOutBounce', function(){
 				animacaoBolinhasComplete++;
 				if (animacaoBolinhasComplete >= 12){
 					continueAnimation1();
