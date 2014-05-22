@@ -20,7 +20,6 @@ window.onload=function(){
 		var posXbolaInit = function(){
 			for (var i in CIDADES){
 				if (CIDADES[i].prefix == bola.id.split("_")[1]){
-					console.log(CIDADES[i].bolaOFF);
 					return CIDADES[i].bolaOFF;
 				}
 			}

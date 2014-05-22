@@ -123,6 +123,7 @@ span{
 	position: relative;
 	display: block;
 	height: 80px;
+	width: 960px;
 }
 #cabezalho_geral div {
 	width: 82%;
@@ -463,7 +464,7 @@ div#rodape{
 	position: absolute;
 	top: 598px;
 	z-index: 101;
-	width: 100%;
+	width: 960px;
 	height: 10px;
 }
 div#rodape p#txtRodape{
