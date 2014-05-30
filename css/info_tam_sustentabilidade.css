@@ -31,13 +31,19 @@
 	src: local('../rg'), url('../fonts/rg.woff') format('woff'), url('../fonts/rg.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: 'CustomNarrow';
+	src: url('../fonts/ArialNarrow.eot');
+	src: local('../fontsArialNarrow'), url('../fonts/ArialNarrow.woff') format('woff'), url('../fonts/ArialNarrow.ttf') format('truetype');
+}
+
 
 *{
    margin:0;
    padding:0;
-   font-family: "RotisSemiSansLight45", "Arial Narrow", Arial, Sans-Serif;
-   -webkit-font-smoothing: antialiased;
-/*    transition: all 1s ease-in; */
+   font-family: "RotisSemiSansLight45", "CustomNarrow", Arial, Sans-Serif;
+/*  -webkit-font-smoothing: antialiased;
+    transition: all 1s ease-in; */
 }
 		
 body {
@@ -75,7 +81,7 @@ h3 {
 	font-size:20px;
 }
 h5, h6, p, text{
-	font-family: "Arial Narrow", "RotisSemiSansLight45", Arial, Sans-Serif;
+	font-family: "CustomNarrow", "RotisSemiSansLight45", Arial, Sans-Serif;
 }
 h4 {
 	color: black;
@@ -138,8 +144,8 @@ span{
 
 .numerosGrafico{
 	font-weight: bold;
-	font-size: 12px;
-	color: #555;
+	font-size: 10px;
+	color: black;
 	float: left;
 	margin-left: 10px;
 
@@ -187,15 +193,19 @@ span{
 #main div.titulos{
 	width: 100%;
 	position: absolute;
-	top: 20px;
+	top: 10px;
 	opacity: 0;
 }
 
 #main div.titulos h4{
-	font-size: 16px;
+	font-size: 18px;
 	text-align: center;
 	width: 570px;
 	margin: 0 auto;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "kern";
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern";
 }
 
 
@@ -227,7 +237,7 @@ div#switchWrapper p:nth-child(1){
 	margin-top: 10px;
 }
 div#switchWrapper p:nth-child(2){
-	margin-top: 17px;
+	margin-top: 25px;
 }
 
 
@@ -252,7 +262,7 @@ img.linhaDivisoria{
 div#txtPasso1{
 	width: 100%;
 	position: absolute;
-	top: 130px;
+	top: 165px;
 	display: none;
 }
 div#txtPasso1 h4#txtPasso1{
@@ -275,7 +285,7 @@ div#secao1{
 
 div#secao1 div#txtVoosWrapper {
 	position: absolute;
-	top: 34px;
+	top: 66px;
 	display: none;
 }
 
@@ -300,11 +310,11 @@ div#txtVoosWrapper p.numerosGrafico{
 #txtVoos_cuiaba 		{ left: 602px; }
 
 
-div#secao1 div#txtNomesCidadesWrapper{	
+/* div#secao1 div#txtNomesCidadesWrapper{	
 	position: absolute;
 	display: none;
 	left: 304px;
-	top: 150px;
+	top: 155px;
 	-webkit-transform-origin: top left;
 	-moz-transform-origin: top left;
 	-ms-transform-origin: top left;
@@ -320,6 +330,7 @@ div#secao1 div#txtNomesCidadesWrapper{
 div#secao1 div#txtNomesCidadesWrapper p.nomeCidade{
 	text-align: right;
 	position: relative;
+	font-family: "CustomNarrow", "RotisSemiSansLight45", Arial, Sans-Serif;
 }
 div#secao1 div#txtNomesCidadesWrapper p#cidade_saopaulo 		{top: 7px;}
 div#secao1 div#txtNomesCidadesWrapper p#cidade_brasilia 		{top: 24px;}
@@ -332,12 +343,12 @@ div#secao1 div#txtNomesCidadesWrapper p#cidade_portoalegre 		{top: 88px;}
 div#secao1 div#txtNomesCidadesWrapper p#cidade_curitiba 		{top: 99px;}
 div#secao1 div#txtNomesCidadesWrapper p#cidade_manaus 			{top: 108px;}
 div#secao1 div#txtNomesCidadesWrapper p#cidade_natal 			{top: 117px;}
-div#secao1 div#txtNomesCidadesWrapper p#cidade_cuiaba 			{top: 124px;}
+div#secao1 div#txtNomesCidadesWrapper p#cidade_cuiaba 			{top: 124px;} */
 
 div#secao1 div#bolinhasWrapper{
 	position: relative;
 	margin-left: 3px;
-	top: 56px;
+	top: 84px;
 }
 
 .bolinhas{
@@ -363,7 +374,7 @@ h5.legendasGrafico{
 	display: none;
 }
 h5.legendasGrafico#legendaGraficoVoos{
-	top: 31px;
+	top: 62px;
 	left: 43px;
 }
 
@@ -375,7 +386,7 @@ div#secao1 h5#legendaGraficoEmissoes{
 }
 
 div#secao1 img#secao1_ON{
-	margin-top: 56px;
+	margin-top: 90px;
 	margin-left: 88px;
 	pointer-events: none;
 	display: none;
@@ -390,7 +401,7 @@ div#secao1 img#secao1_OFF{
 div#secao1 div#txtValoresCarbonoWrapper{
 	margin-left: 100px;
 	position: absolute;
-	top: 280px;
+	top: 285px;
 	display: none;
 }
 div#secao1 div#txtValoresCarbonoWrapper p{
@@ -410,13 +421,13 @@ div#secao1 div#txtValoresCarbonoWrapper p{
 #txtEmissoes_curitiba 		{ left: 629px; }
 #txtEmissoes_manaus 		{ left: 664px; }
 #txtEmissoes_natal 			{ left: 702px; }
-#txtEmissoes_cuiaba 		{ left: 731px; }
+#txtEmissoes_cuiaba 		{ left: 735px; }
 
 
 
 div#txtPasso2{
 	position: relative;
-	top: 420px;
+	top: 430px;
 	left: 90px;
 	width: 780px;
 	display: none;
@@ -431,6 +442,7 @@ div#txtPasso2 h4{
 
 
 div#txtPasso2 img.linhaDivisoria#linhaDivisoriaSuperior{
+	top: 3px;
 }
 div#txtPasso2 img.linhaDivisoria#linhaDivisoriaInferior{
 	top:15px;
@@ -526,7 +538,7 @@ div#rodape img.icones.selected{
 div#rodape div.painel_rodape{
 	position: absolute;
 	width: 735px;
-	height: 80px;
+	height: 60px;
 	bottom: -10px;
 	right: 0;
 	padding: 15px 70px 0 15px;
@@ -539,9 +551,12 @@ div#rodape div.painel_rodape{
 	display: none;
 }
 
+h3.txt_rodape{
+	font-size: 16px;
+}
 p.txt_rodape{
 	margin-top: -12px;
-	color: #555;
+	color: black;
 	font-size: 11px;
 	line-height: 13px;
 	display: none;
@@ -561,7 +576,7 @@ p.txt_rodape{
 	display: none;
 	width: 140px;
 	height: 53px;
-	top: -30px;
+	top: -20px;
 	padding: 10px;
 	background: rgba(255, 255, 255, .9);
 	border: 1px solid grey;
